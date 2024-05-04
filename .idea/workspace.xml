@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5e87b1-7a35-4889-93f4-3f1a2424b41f" name="Changes" comment="almost done backprop">
+    <list default="true" id="9f5e87b1-7a35-4889-93f4-3f1a2424b41f" name="Changes" comment="it works i guess">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Perceptron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perceptron.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Perceptron.py" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -51,11 +54,15 @@
   &quot;keyToString&quot;: {
     &quot;Python.Perceptron.executor&quot;: &quot;Run&quot;,
     &quot;Python.a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.callback_list.executor&quot;: &quot;Run&quot;,
     &quot;Python.chat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chat2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chat3.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sk.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Никита/Desktop/НГУ/ТПНС/lab_2/Perceptron.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Никита/Desktop/НГУ/ТПНС/lab_2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,6 +72,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Никита\Desktop\НГУ\ТПНС\lab_2" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Perceptron" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="lab_2" />
@@ -93,8 +105,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-PY-241.15989.57" />
-        <option value="bundled-python-sdk-38de69ad2556-f766e73a3f24-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.57" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -119,7 +131,51 @@
       <workItem from="1713428792247" duration="333000" />
       <workItem from="1713429137336" duration="4284000" />
       <workItem from="1713433461868" duration="6389000" />
-      <workItem from="1713439921213" duration="6304000" />
+      <workItem from="1713439921213" duration="7518000" />
+      <workItem from="1713454803845" duration="618000" />
+      <workItem from="1713460049560" duration="282000" />
+      <workItem from="1713467411339" duration="460000" />
+      <workItem from="1713478853397" duration="648000" />
+      <workItem from="1713526339100" duration="3375000" />
+      <workItem from="1713561008962" duration="562000" />
+      <workItem from="1713597920285" duration="150000" />
+      <workItem from="1713604892697" duration="790000" />
+      <workItem from="1713671570121" duration="4291000" />
+      <workItem from="1713697153917" duration="15690000" />
+      <workItem from="1713795626779" duration="7161000" />
+      <workItem from="1713802859839" duration="7326000" />
+      <workItem from="1713822967400" duration="5269000" />
+      <workItem from="1713865506846" duration="14659000" />
+      <workItem from="1713903767631" duration="6969000" />
+      <workItem from="1713949573389" duration="11313000" />
+      <workItem from="1713979368005" duration="22000" />
+      <workItem from="1713979396461" duration="10000" />
+      <workItem from="1713979411570" duration="8418000" />
+      <workItem from="1713987908222" duration="59000" />
+      <workItem from="1713987969028" duration="132000" />
+      <workItem from="1713988435146" duration="261000" />
+      <workItem from="1713988704055" duration="3742000" />
+      <workItem from="1714044176898" duration="319000" />
+      <workItem from="1714080218707" duration="1038000" />
+      <workItem from="1714141126654" duration="3370000" />
+      <workItem from="1714159749084" duration="1933000" />
+      <workItem from="1714175638090" duration="1104000" />
+      <workItem from="1714211198734" duration="9414000" />
+      <workItem from="1714225763957" duration="2605000" />
+      <workItem from="1714251016046" duration="5149000" />
+      <workItem from="1714290665929" duration="11388000" />
+      <workItem from="1714481010212" duration="25837000" />
+      <workItem from="1714512384219" duration="4832000" />
+      <workItem from="1714560881455" duration="9141000" />
+      <workItem from="1714577422134" duration="7183000" />
+      <workItem from="1714584687082" duration="16609000" />
+      <workItem from="1714606694932" duration="4612000" />
+      <workItem from="1714654135852" duration="29000" />
+      <workItem from="1714735458752" duration="9235000" />
+      <workItem from="1714796793687" duration="1296000" />
+      <workItem from="1714812341111" duration="7000" />
+      <workItem from="1714817865435" duration="2936000" />
+      <workItem from="1714832339521" duration="5281000" />
     </task>
     <task id="LOCAL-00001" summary="Created perceptron constructor + __str__ method + predict">
       <option name="closed" value="true" />
@@ -137,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713293413884</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="it works i guess">
+      <option name="closed" value="true" />
+      <created>1713453697096</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713453697096</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,12 +210,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created perceptron constructor + __str__ method + predict" />
     <MESSAGE value="almost done backprop" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost done backprop" />
+    <MESSAGE value="it works i guess" />
+    <option name="LAST_COMMIT_MESSAGE" value="it works i guess" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.layers[2]" />
+        <watch expression="self.layers[0].links" />
+        <watch expression="model.layers.T_destination" />
+        <watch expression="self.biases" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab_2$main.coverage" NAME="Perceptron Coverage Results" MODIFIED="1713433284674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/lab_2$chat.coverage" NAME="chat Coverage Results" MODIFIED="1713439264563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/lab_2$Perceptron.coverage" NAME="Perceptron Coverage Results" MODIFIED="1713453381408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$callback_list.coverage" NAME="callback_list Coverage Results" MODIFIED="1714588685767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/keras/src/callbacks" />
+    <SUITE FILE_PATH="coverage/lab_2$main.coverage" NAME="main Coverage Results" MODIFIED="1714809470682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../lab_1" />
+    <SUITE FILE_PATH="coverage/lab_2$chat.coverage" NAME="chat Coverage Results" MODIFIED="1714836097411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$chat2.coverage" NAME="chat2 Coverage Results" MODIFIED="1714837253151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$chat3.coverage" NAME="chat3 Coverage Results" MODIFIED="1714515236175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$Perceptron.coverage" NAME="Perceptron Coverage Results" MODIFIED="1714838770230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$sk.coverage" NAME="sk Coverage Results" MODIFIED="1714740879460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab_2$a.coverage" NAME="a Coverage Results" MODIFIED="1712838919919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
