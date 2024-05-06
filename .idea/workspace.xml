@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5e87b1-7a35-4889-93f4-3f1a2424b41f" name="Changes" comment="it works i guess">
+    <list default="true" id="9f5e87b1-7a35-4889-93f4-3f1a2424b41f" name="Changes" comment="regressor done!">
+      <change afterPath="$PROJECT_DIR$/mushrooms.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perceptron.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Perceptron.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,29 +51,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Perceptron.executor&quot;: &quot;Run&quot;,
-    &quot;Python.a.executor&quot;: &quot;Run&quot;,
-    &quot;Python.callback_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sk.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Никита/Desktop/НГУ/ТПНС/lab_2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Perceptron.executor": "Run",
+    "Python.Perceptron_classifier.executor": "Run",
+    "Python.a.executor": "Run",
+    "Python.callback_list.executor": "Run",
+    "Python.chat.executor": "Run",
+    "Python.chat2.executor": "Run",
+    "Python.chat3.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.sk.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Никита/Desktop/НГУ/ТПНС/lab_2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Никита\Desktop\НГУ\ТПНС\lab_2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Никита\Desktop\НГУ\ТПНС\lab_2" />
     </key>
@@ -175,7 +180,9 @@
       <workItem from="1714796793687" duration="1296000" />
       <workItem from="1714812341111" duration="7000" />
       <workItem from="1714817865435" duration="2936000" />
-      <workItem from="1714832339521" duration="5281000" />
+      <workItem from="1714832339521" duration="5323000" />
+      <workItem from="1714838861144" duration="39000" />
+      <workItem from="1714937491723" duration="16255000" />
     </task>
     <task id="LOCAL-00001" summary="Created perceptron constructor + __str__ method + predict">
       <option name="closed" value="true" />
@@ -201,7 +208,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713453697096</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="regressor done!">
+      <option name="closed" value="true" />
+      <created>1714838821404</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714838821404</updated>
+    </task>
+    <task id="LOCAL-00005" summary="regressor done!">
+      <option name="closed" value="true" />
+      <created>1714838890469</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714838890469</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +234,8 @@
     <MESSAGE value="Created perceptron constructor + __str__ method + predict" />
     <MESSAGE value="almost done backprop" />
     <MESSAGE value="it works i guess" />
-    <option name="LAST_COMMIT_MESSAGE" value="it works i guess" />
+    <MESSAGE value="regressor done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="regressor done!" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -226,10 +250,11 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lab_2$callback_list.coverage" NAME="callback_list Coverage Results" MODIFIED="1714588685767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/keras/src/callbacks" />
     <SUITE FILE_PATH="coverage/lab_2$main.coverage" NAME="main Coverage Results" MODIFIED="1714809470682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../lab_1" />
-    <SUITE FILE_PATH="coverage/lab_2$chat.coverage" NAME="chat Coverage Results" MODIFIED="1714836097411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$chat.coverage" NAME="chat Coverage Results" MODIFIED="1714954021547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab_2$chat2.coverage" NAME="chat2 Coverage Results" MODIFIED="1714837253151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab_2$chat3.coverage" NAME="chat3 Coverage Results" MODIFIED="1714515236175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/lab_2$Perceptron.coverage" NAME="Perceptron Coverage Results" MODIFIED="1714838770230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$Perceptron.coverage" NAME="Perceptron Coverage Results" MODIFIED="1714951618215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_2$Perceptron_classifier.coverage" NAME="Perceptron_classifier Coverage Results" MODIFIED="1714954294504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab_2$sk.coverage" NAME="sk Coverage Results" MODIFIED="1714740879460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab_2$a.coverage" NAME="a Coverage Results" MODIFIED="1712838919919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

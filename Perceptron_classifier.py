@@ -1,16 +1,15 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
 
 
-def ReLU(y):
-    return np.maximum(0, y)
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
 
 
-def ReLU_derivative(z):
-    if z > 0:
-        return np.ones(z.shape)
-    return np.zeros(z.shape)
+def sigmoid_derivative(x):
+    return sigmoid(x) * (1 - sigmoid(x))
 
 
 class Perceptron:
@@ -25,8 +24,8 @@ class Perceptron:
         self.input_dim = input_dim
         self.output_dim = output_dim
         self.weights.append(np.random.random((hidden_sizes[0], self.input_dim)))
-        self.act_func = ReLU
-        self.act_derivative = ReLU_derivative
+        self.act_func = sigmoid
+        self.act_derivative = sigmoid_derivative
         if bias:
             self.biases.append(np.zeros(hidden_sizes[0]))
         for i in range(1, len(hidden_sizes)):
@@ -57,28 +56,28 @@ class Perceptron:
         if self.bias:
             for w, b in zip(self.weights, self.biases):
                 if not np.array_equal(w, self.weights[-1]):
-                    x = self.act_func(w.dot(x.T).T + b)
-                else:
                     x = w.dot(x.T).T + b
+                else:
+                    x = self.act_func(w.dot(x.T).T + b)
                 self.outputs.append(x)
         else:
             for w in self.weights:
                 if not np.array_equal(w, self.weights[-1]):
-                    x = self.act_func(w.dot(x))
-                else:
                     x = w.dot(x)
+                else:
+                    x = self.act_func(w.dot(x))
                 self.outputs.append(x)
         return x
 
-    def backward(self, error, inp):
-        self.deltas.insert(0, error * 2)
+    def backward(self, out, inp, y):
+        self.deltas.insert(0, out - y)
         for i in reversed(range(len(self.weights) - 1)):
             layer_deltas = []
             for j in range(len(self.outputs[i])):
                 delta = 0.0
                 for k in range(len(self.outputs[i + 1])):
                     delta += self.weights[i + 1][k][j] * self.deltas[0][k]
-                layer_deltas.append(delta * self.act_derivative(self.outputs[i][j]))
+                layer_deltas.append(delta)
             self.deltas.insert(0, np.array(layer_deltas))
         for i in reversed(range(len(self.weights))):
             if self.bias:
@@ -87,12 +86,9 @@ class Perceptron:
                 if i == 0:
                     for k in range(len(inp)):
                         self.weights[i][j][k] -= self.learning_rate * inp[k] * self.deltas[i][j]
-
                 else:
                     for k in range(len(self.outputs[i - 1])):
-
                         self.weights[i][j][k] -= self.learning_rate * self.outputs[i - 1][k] * self.deltas[i][j]
-
         self.deltas.clear()
         self.outputs.clear()
 
@@ -101,12 +97,11 @@ class Perceptron:
             l_ = 0.0
             for x_, y_ in zip(x, y):
                 out = self.forward(x_)
-                error = out - y_
-                self.loss = np.mean(np.square(out - y_))
+                self.loss = -(y_ * np.log(out) + (1 - y_) * np.log(1 - out))
                 l_ += self.loss
-                self.backward(error, x_)
-            if (epoch + 1) % 1 == 0:
-                print(f'Epoch [{epoch + 1}/{epochs}], Loss: {l_}')
+                self.backward(out, x_, y_)
+            if (epoch + 1) % 10 == 0:
+                print(f'Epoch [{epoch + 1}/{epochs}], Loss: {l_ / len(x)}')
             # if self.loss < 1e-5:
             #     print(f'Epoch [{epoch + 1}/{epochs}], Loss: {self.loss:.20f}')
             #     break
@@ -140,31 +135,55 @@ def clear_dataset(data, targ):
 
 
 if __name__ == '__main__':
-    laptops = clear_dataset(pd.read_csv('Laptop_price.csv'), 'Price')
-    laptops_normalized = (laptops - laptops.min()) / (laptops.max() - laptops.min())
-    target = laptops_normalized['Price']
-    laptops_normalized.drop(['Price'], axis=1, inplace=True)
-    X_train = []
-    Y_train = []
-    for index, row in laptops_normalized.iterrows():
-        X_train.append(np.array(row))
-    for row in target:
-        Y_train.append(np.array(row))
     learning_rate = 0.01
-    input_size = 5
+    input_size = 17
     output_size = 1
-    hidden_sizes = [2, 1, 2]
-    num_epochs = 10
+    hidden_sizes = [1, 1, 2]
+    num_epochs = 1
+    target = 'poisonous'
+    mushrooms = clear_dataset(pd.read_csv('mushrooms.csv'), target)
+    scaler = MinMaxScaler()
+    normalized_mushrooms = scaler.fit_transform(mushrooms)
+    mushrooms = pd.DataFrame(normalized_mushrooms, columns=mushrooms.columns)
+    mushrooms_target = mushrooms[target]
+    mushrooms.drop([target], axis=1, inplace=True)
+    x_train = []
+    y_train = []
+    for _, row in mushrooms.iterrows():
+        x_train.append(row)
+    for row in mushrooms_target:
+        y_train.append(row)
+    x_train_perc = np.array(x_train)
+    y_train_perc = np.array(y_train)
+    X_train, X_test, Y_train, Y_test = train_test_split(x_train_perc, y_train_perc, test_size=0.2, random_state=9)
     perceptron = Perceptron(learning_rate, input_size, output_size, hidden_sizes, True)
-    X_train, X_test, Y_train, Y_test = train_test_split(X_train, Y_train, test_size=0.2, random_state=190)
-    perceptron.train(X_train, Y_train, num_epochs)
-    perceptron_test_out = []
-    perceptron_train_out = []
-    for test_input in X_test:
-        perceptron_test_out.append(perceptron.forward(test_input))
-    for train_input in X_train:
-        perceptron_train_out.append(perceptron.forward(train_input))
-    print(np.mean(np.abs(np.squeeze(perceptron_test_out) - Y_test)))
-    perceptron_test_out = np.squeeze(perceptron_test_out) * (laptops['Price'].max() - laptops['Price'].min()) + laptops['Price'].min()
-    Y_test = np.array(Y_test) * (laptops['Price'].max() - laptops['Price'].min()) + laptops['Price'].min()
-    print(np.mean(np.abs(perceptron_test_out - Y_test)))
+    perceptron.train(X_train, Y_train, 20)
+    y_test_out = []
+    for test_data in X_test:
+        output = perceptron.forward(test_data)
+        if abs(output) < abs(output - 1):
+            y_test_out.append(0)
+        else:
+            y_test_out.append(1)
+    y_test_out = np.array(y_test_out)
+    tp, tn, fp, fn = 0, 0, 0, 0
+    for a, b in zip(y_test_out, Y_test):
+        if a == 1:
+            if b == 1:
+                tp += 1
+            else:
+                fp += 1
+        else:
+            if b == 0:
+                tn += 1
+            else:
+                fn += 1
+
+    accuracy = (tp + tn) / (tp + tn + fp + fn)
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    f1 = 2 * (precision * recall) / (precision + recall)
+    print(f'Accuracy: {accuracy}')
+    print(f'Precision: {precision}')
+    print(f'Recall: {recall}')
+    print(f'F1: {f1}')
